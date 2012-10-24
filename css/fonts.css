@@ -1,0 +1,38 @@
+@charset "utf-8";
+/** 
+ * ------------------ 
+ * Fonts CSS File
+ * ------------------
+ * Description -> Handles all custom fonts
+ * 
+ *  Created by: Rufus N Mbugua
+ *  2012
+ *   
+ * /
+
+/* 
+ * Quicksand Font Family 
+ */
+ 
+@font-face {
+	font-family: Imperator Bold;
+	src: url("fonts/imperator_bold.ttf");
+	font-weight: normal;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: Imperator;
+	src: url("fonts/imperator.ttf");
+	font-weight: normal;
+	font-style: normal;
+}
+
+
+@font-face {
+	font-family: Homizio Bold;
+	src: url("fonts/bold.ttf");
+	font-weight: bold;
+	font-style: normal;
+}
+
