@@ -1,0 +1,82 @@
+// customize bootstrap variables here:
+@import "variables";
+@import "bootstrap";
+
+body{
+    font-family: Open Sans;
+}
+.content{
+    padding: 5% 5% 10% 5%;
+    height:700px;
+
+}
+nav{
+    background:lightsteelblue !important;
+    box-shadow: 0 0.5px 2px 2px #ddd;
+    border:none !important;
+    .navbar-brand{
+        font-size:2em;
+    }
+}
+a.active{
+    background:#e7e7e7;
+}
+a.active:hover{
+    background:#e6e6e6 !important;
+}
+#map,#route{
+    @extend .col-md-6;
+    height:500px;
+}
+#map-large{
+    @extend .col-md-12;
+    height:100%;
+}
+form{
+    input[type="text"]{
+        @extend .form-control;
+    }
+
+    button{
+        @extend .btn ;
+        @extend .btn-primary;
+
+    }
+
+}
+i{
+    padding-left:5%;
+}
+footer{
+    background:#e7e7e7;
+    padding:1%;
+    width:100%;
+    position:fixed;
+    bottom:0;
+}
+span{
+
+    }
+.social{
+    padding-left:50%;
+
+    .circle{
+        vertical-align: baseline;
+        display:inline-block;
+        border-radius:50%;
+        width:50px;
+        height:50px;
+        background:#888;
+        color:white;
+
+        i{
+            margin:12px 5px 5px 10px;
+            font-size:2em;
+        }
+
+    }
+    .circle:hover{
+        background:#333;
+        color:white;
+    }
+}

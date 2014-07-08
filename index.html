@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Ember Starter Kit</title>
+        <link rel="stylesheet" href="assets/bower_components/open-sans/css/open-sans.css">
+        <link rel="stylesheet" href="assets/stylesheets/styles.css">
+        <link rel="stylesheet" href="assets/bower_components/font-awesome/css/font-awesome.css">
+    </head>
+    <body>
+        <script type="text/x-handlebars">
+
+            <nav class="navbar navbar-default navbar-fixed-top" role="navigation">
+                <div class="container">
+                    <div class="navbar-header">
+                        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                            <span class="sr-only">Toggle navigation</span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                        </button>
+                        <a class="navbar-brand" href="#">Tusafiri</a>
+                    </div>
+                    <div class="collapse navbar-collapse">
+                        <ul class="nav navbar-nav">
+                            <li>{{#link-to 'index'}}Home{{/link-to}}</li>
+                            <li>{{#link-to 'booking' id="booking"}}Booking{{/link-to}}</li>
+                            <li>{{#link-to 'contacts'}}Contact Us{{/link-to}}</li>
+                        </ul>
+                    </div><!--/.nav-collapse -->
+                </div>
+            </nav>
+            <section class='content'>
+                {{outlet}}
+            </section>
+            <footer>
+                <span>Designed bt RNM  &copy 2014</span>
+                <span class="social">
+                <a href="#" class="circle"><i class="fa fa-facebook"></i></a>
+                <a href="#" class="circle"><i class="fa fa-twitter"></i></a>
+                <a href="#" class="circle"><i class="fa fa-github-alt"></i></a>
+                <a href="#" class="circle"><i class="fa fa-tumblr"></i></a>
+                </span>
+            </footer>
+        </script>
+
+        <script type="text/x-handlebars" id="index">
+            home
+        </script>
+        <script type="text/x-handlebars" id="booking">
+
+            <section id="map" class="map">
+            </section>
+            <section id="route">
+                <form>
+                    <h2>Book Ticket <i class="fa fa-ticket"></i></h2>
+                    <div class="form-group">
+                        <label>I'm travelling from</label>
+                        <div class="input-group">
+                           <div class="input-group-addon"><i class="fa fa-map-marker"></i></div>
+                            <input type="text" id="source">
+                        </div>
+
+                    </div>
+                    <div class="form-group">
+                        <label>I want to go to</label>
+                         <div class="input-group">
+                           <div class="input-group-addon"><i class="fa fa-map-marker"></i></div>
+                            <input type="text" id="destination">
+                        </div>
+                    </div>
+                    <button>Take Me There!<i class="fa fa-car"></i></button>
+                </form>
+            </section>
+
+        </script>
+        <script type="text/x-handlebars" id="contacts">
+            <div id="map-large" class="map"></div>
+        </script>
+
+        <script src="assets/bower_components/jquery/dist/jquery.js"></script>
+        <script src="assets/bower_components/handlebars/handlebars.js"></script>
+        <script src="assets/javascripts/libs/ember-1.5.1.js"></script>
+        <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDDP1FG8AyYyR6blmQ702KbR8zOwh1VAWY&libraries=places">
+        </script>
+        <script src="assets/bower_components/gmaps/gmaps.js"></script>
+        <script src="assets/javascripts/app.js"></script>
+
+        <!-- to activate the test runner, add the "?test" query string parameter -->
+        <script src="tests/runner.js"></script>
+    </body>
+</html>
